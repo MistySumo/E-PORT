@@ -11,9 +11,36 @@ li {
     list-style-type: none;
 }
 
+.sky-color {
+    color: #63c5da;
+}
+
+section {
+    background-color: rgb(245, 245, 245);
+}
+
 #personal-logo {
     width: 150px;
     height: 150px;
+}
+
+.click {
+    transition: all 300ms ease;
+}
+
+.click:hover {
+    transform: scale(1.1);
+}
+
+.click:active {
+    transform: scale(0.8);
+}
+
+.title {
+    font-size: 84px;
+    margin-bottom: 12px;
+    text-align: left;
+    
 }
 
 /* 
@@ -23,9 +50,50 @@ LANDING PAGE
 
 #landing-page {
     min-height: 100vh;
-    
+
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 70px);
+    padding: 0 8px;
+    text-align: center;
+}
+
+.header__content {
+    margin-top: -50px;
+}
+
+.header__para {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px auto 0;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+.social__list {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social__link {
+    background-color: #63c5da;
+    color: white;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
 /* 
 
 NAVIGATION 
