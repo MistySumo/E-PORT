@@ -11,6 +11,19 @@ li {
     list-style-type: none;
 }
 
+p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
 .sky-color {
     color: #63c5da;
 }
@@ -71,7 +84,6 @@ LANDING PAGE
     font-weight: 700;
     margin: 20px auto 0;
     max-width: 500px;
-    line-height: 1.5;
 }
 
 .social__list {
@@ -93,6 +105,57 @@ LANDING PAGE
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+}
+
+.mail__btn {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #242424;
+    color: white;
+    position: absolute;
+    bottom: 32px;
+    right: 40px;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 10%;
+    height: 55px;
+    width: 34px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll__icon {
+    width: 22px;
+    height: 44px;
+    border: 2px solid #63c5da;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll__icon:after {
+    content: "";
+    width: 4px;
+    height: 6px;
+    background-color: #242424;
+    border-radius: 2px;
+    animation: scroll 1000ms infinite alternate-reverse;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(6px);
+    }
+
+    100% {
+        transform: translateY(-6px);
+    }
 }
 /* 
 
@@ -127,3 +190,10 @@ nav {
 .fa-moon {
     font-size: 20px;
 }
+
+/* 
+
+ABOUT ME 
+
+*/
+
