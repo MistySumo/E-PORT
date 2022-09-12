@@ -230,14 +230,16 @@ ABOUT ME
 
 .about__img {
     margin: 0 auto;
+    
 }
 
-.about__img img {
+ .about__img img {
     border-radius: 50%;
     box-shadow: 0 10px 20px rgb(0, 0, 0 / 50%);
-    height: 350px;
-    width: 350px;
-}
+    height: 300px;
+    width: 300px;
+    transform: rotate(-25deg);
+ }
 
 .about__text {
     width: 75%;
@@ -251,11 +253,12 @@ ABOUT ME
 
 .btn {
     background: #63c5da;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    font-size: 1.25em;
+    border: 2px solid #63c5da;
     border-radius: 4px;
-    border: none;
+    color: #ececec;
+    font-weight: 400;
+    font-size: 21px;
+    padding: 10px 80px;
     margin-top: 12px;
 }
 
