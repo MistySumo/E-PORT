@@ -765,7 +765,10 @@ footer {
     margin: 0 auto;
     padding-top: 30px;
     text-align: center;
-    width: 85%;
+    width: 80%;
+ }
+ .about__para {
+    width: 100%;
  }
 }
 
@@ -804,7 +807,11 @@ footer {
     width: 100%;
     text-align: center;
  }
- .projecet__description--sub-title {
+ .project__description--title {
+    padding: 10px;
+    text-align: center;
+ }
+ .projecet__description-sub--title {
     margin-bottom: 8px;
  }
  .modal__half {
