@@ -7,6 +7,15 @@
     <title>Angel Vasquez</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/f9f8258128.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("eXtzW9hvJQhRlnJN0");
+   })();
+</script>
 </head>
 <body>
     <section id="landing-page">
@@ -16,28 +25,26 @@
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a href="#about" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black">About</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a href="#projects" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black">Projects</a>
                 </li>
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black">Contact</a>
                 </li>
-                <li class="nav__link click">
+                <li class="nav__link click"onclick="toggleContrast()">
                     <a href="#" class="
-                    nav__link--anchor
-                    link__hover-effect
-                    link__hover-effect--black">
+                    nav__link--anchor">
                     <i class="fa fa-moon"></i></a>
                 </li>
             </ul>
@@ -61,12 +68,55 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fas fa-envelope"></i>
         </button>
         <a href="#about" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title">Here's a bit about me</h3>
+                <h4 class="modal__sub-title">frontend Software Engineer</h4>
+                <p class="modal__para">Im a 21 year-old <b>frontend software engineer</b> based in New York City with a passion for creating <b>beautiful projects</b> and <b>User-friendly experiences</b>.
+                    <br>
+                    <br>
+                   I strive to challenge myself and create work that improves my <b>problem solving skills</b> when tackling <b>difficult engineering problems</b>.
+                </p>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exist click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat!
+                </h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">
+                    I'm currently open for new opportunties.
+                </h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text"></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email"></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text"></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send it my way
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon.
+                </div>
+            </div>
+        </div>
     </section>
     <section id="about">
         <h2>
@@ -86,7 +136,7 @@
                     <br>
                     If you want to learn more about me.
                 </p>
-                <a href="">
+                <a href="" target="_blank">
                 <button type="button" class="btn click">Learn More</button>
                 </a>
             </div>
@@ -94,12 +144,12 @@
 
     </section>
     <section id="skills">
-        <h2>
+        <h2 class="section__title">
             My <span class="sky-color">Tech Stack</span>
         </h2>
         <div class="stack__wrapper">
             <div class="tech__used">
-                <h3>
+                <h3 class="section__sub-title">
                     My <span class="sky-color">Technologies</span>
                 </h3>
                 <div class="tech__icons">
@@ -138,7 +188,7 @@
                 </div>
             </div>
             <div class="tech__learned">
-                <h3>
+                <h3 class="section__sub-title">
                     <span class="sky-color">Technologies</span> Worked With/Learning
                 </h3>
                 <div class="tech__icons">
@@ -173,7 +223,7 @@
                                     HTML,CSS3
                                 </h4>
                                 <p class="project__description--para">
-                                    Lily Acessoria is a latina owned product store based in the Dominican Republic. A store managed and owned by a native of gurabo seeking to turn her buisness a nationwide phemenon. As a developer I was intriuged on taking on the project to challenge both my skills in design and coding. This was one of my first projects using HTML,CCS3 and UI/UX design best practices for an international client. 
+                                    Lily Acessoria is a latina owned product store based in the Dominican Republic. As a developer I was intriuged on taking on the project to challenge both my skills in design and coding. This was one of my first projects using HTML,CCS3 and UI/UX design best practices for an international client. 
                                 </p>
                                 <div class="project__description--links">
                                     <a href="https://mistysumo.github.io/E-commerceFF/" class="project__description--link">
@@ -187,5 +237,38 @@
             </div>
         </div>
     </section>
+    <footer>
+        
+    <div class=" row footer__row">
+        <div class="footer__social--list">
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect"
+            >
+            LinkedIn
+            </a>
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect"
+            >
+            Github
+            </a>
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect"
+            >
+            Email
+            </a>
+
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect"
+            onclick="toggleModal()">
+            Hire Me
+            </a>
+        </div>
+        <div class="footer__copyright">By Angel Vasquez</div>
+    </div>
+</footer>
 </body>
 </html>
