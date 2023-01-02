@@ -7,6 +7,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.webgl {
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -184,7 +190,12 @@ input:focus, textarea:focus {
     border-color: white;
 }
 
-.dark-theme .scroll__icon:after {
+.dark-theme .scroll__icon:after, 
+.dark-theme .link__hover-effect--black:after {
+    background-color: white;
+}
+
+.dark-theme .mail__btn {
     background-color: white;
     color: #242422;
 }

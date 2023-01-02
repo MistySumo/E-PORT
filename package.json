@@ -1,0 +1,22 @@
+{
+  "name": "e-port",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MistySumo/E-PORT.git"
+  },
+  "author": "Angel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MistySumo/E-PORT/issues"
+  },
+  "homepage": "https://github.com/MistySumo/E-PORT#readme",
+  "dependencies": {
+    "three": "^0.145.0"
+  }
+}
