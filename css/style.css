@@ -633,6 +633,10 @@ Projects
     background-color: #ececec;
 }
 
+.project {
+    margin-bottom: 120px;
+}
+
 .project__wrapper {
     margin: 0 auto;
     max-width: 1000px;
